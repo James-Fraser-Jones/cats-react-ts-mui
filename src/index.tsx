@@ -9,8 +9,6 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
-import { AccessAlarm, ThreeDRotation } from '@mui/icons-material'; //how to import font-icons
-
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

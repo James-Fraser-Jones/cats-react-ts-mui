@@ -1,17 +1,35 @@
 import { Routes, Route, Link as RouterLink } from "react-router-dom";
 
-import { Link, Button, CssBaseline } from '@mui/material';
+import { Toolbar, IconButton, Typography, AppBar, Link, Button, CssBaseline } from '@mui/material';
+import { Container } from "@mui/system";
+import MenuIcon from '@mui/icons-material/Menu';
 
 function App() {
   return (
     <>
       <CssBaseline />
-      <div>
+      <AppBar position="static">
+        <Toolbar>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{ mr: 2 }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            Cats
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      <Container>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />
         </Routes>
-      </div>
+      </Container>
     </>
   );
 }
